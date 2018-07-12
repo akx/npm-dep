@@ -1,5 +1,9 @@
 *.jsonl
-*.txt
+*.prof
+*.py[cod]
+*.sqlite3
+*.tsv
 .idea
+data/*.txt
 node_modules
 yarn.lock
