@@ -1,0 +1,8 @@
+create table deps (srcpkg text, srcver text, type text, dstpkg text, dstver text);
+create table pkgs (pkg text, ver text);
+.separator \t
+.import dependencies.tsv deps
+.import versions.tsv pkgs
+create index pkgs_pkg_ix on pkgs (pkg);
+create index deps_srcpkg_ix on deps (srcpkg);
+create index deps_dstpkg_ix on deps (dstpkg);
